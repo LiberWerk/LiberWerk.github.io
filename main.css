@@ -389,9 +389,54 @@ body {
   text-transform: uppercase;
   width: fit-content;
 }
-.timeline-content h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
-.timeline-company { font-size: 13px; color: var(--accent); margin-bottom: 0.6rem; font-weight: 500; }
-.timeline-content p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+.timeline-company { font-size: 14px; color: var(--accent); margin-bottom: 0.75rem; font-weight: 600; }
+.timeline-content p { font-size: 14px; color: var(--muted); line-height: 1.65; margin-top: 0.75rem; }
+
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.role-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+.role-item:last-child { border-bottom: none; }
+
+.role-item--promoted {
+  background: var(--bg2);
+  position: relative;
+}
+.role-item--promoted::before {
+  content: '↑';
+  position: absolute;
+  left: -18px;
+  font-size: 11px;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.role-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.role-period {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
 
 /* ── About / Advisor Profile ──────────────────────────────── */
 .about {
