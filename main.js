@@ -82,6 +82,22 @@ const translations = {
     'contact.tag': 'Let\'s Talk',
     'contact.title': 'Start an Engagement',
     'contact.sub': 'Whether you need a fractional CTO, a technical advisor, or a sounding board for engineering strategy — I\'d be glad to hear from you.',
+    'contact.alt.label': 'Prefer email directly?',
+    'contact.alt.reveal': 'Show email address',
+    'form.name': 'Name',
+    'form.name.placeholder': 'Your name',
+    'form.company': 'Company',
+    'form.company.placeholder': 'Company (optional)',
+    'form.email': 'Your Email',
+    'form.email.placeholder': 'you@example.com',
+    'form.service': 'Service of Interest',
+    'form.service.default': 'Select a service…',
+    'form.service.other': 'Other / Not sure yet',
+    'form.message': 'Message',
+    'form.message.placeholder': 'Tell me a bit about your situation and what you\'re looking for…',
+    'form.submit': 'Send Message',
+    'form.success': 'Message sent — I\'ll be in touch shortly.',
+    'form.error': 'Something went wrong. Please try again or use email directly.',
     'footer.note': 'Engineering Leadership Advisory',
   },
   ja: {
@@ -166,6 +182,22 @@ const translations = {
     'contact.tag': 'お問い合わせ',
     'contact.title': 'まずは話しましょう',
     'contact.sub': 'フラクショナルCTO、技術顧問、エンジニアリング戦略のサウンディングボードが必要な方は、お気軽にご連絡ください。',
+    'contact.alt.label': 'メールで直接連絡したい方は',
+    'contact.alt.reveal': 'メールアドレスを表示',
+    'form.name': '名前',
+    'form.name.placeholder': 'お名前',
+    'form.company': '会社名',
+    'form.company.placeholder': '会社名（任意）',
+    'form.email': 'メールアドレス',
+    'form.email.placeholder': 'you@example.com',
+    'form.service': 'ご希望のサービス',
+    'form.service.default': 'サービスを選択…',
+    'form.service.other': 'その他 / まだ決まっていない',
+    'form.message': 'メッセージ',
+    'form.message.placeholder': '状況やご要望をお聞かせください…',
+    'form.submit': '送信する',
+    'form.success': 'メッセージを受け付けました。近日中にご連絡いたします。',
+    'form.error': '送信に失敗しました。再度お試しいただくか、メールでご連絡ください。',
     'footer.note': 'エンジニアリングリーダーシップ アドバイザリー',
   },
   ko: {
@@ -250,6 +282,22 @@ const translations = {
     'contact.tag': '연락하기',
     'contact.title': '함께 시작해요',
     'contact.sub': '프랙셔널 CTO, 기술 고문, 또는 엔지니어링 전략에 대한 사운딩 보드가 필요하시다면 편하게 연락 주세요.',
+    'contact.alt.label': '이메일로 직접 연락하고 싶으시다면',
+    'contact.alt.reveal': '이메일 주소 보기',
+    'form.name': '이름',
+    'form.name.placeholder': '이름을 입력해 주세요',
+    'form.company': '회사명',
+    'form.company.placeholder': '회사명 (선택)',
+    'form.email': '이메일',
+    'form.email.placeholder': 'you@example.com',
+    'form.service': '관심 서비스',
+    'form.service.default': '서비스를 선택해 주세요…',
+    'form.service.other': '기타 / 아직 미정',
+    'form.message': '메시지',
+    'form.message.placeholder': '현재 상황과 필요한 것을 알려주세요…',
+    'form.submit': '메시지 보내기',
+    'form.success': '메시지가 전송됐습니다. 곧 연락드리겠습니다.',
+    'form.error': '전송에 실패했습니다. 다시 시도하거나 이메일로 직접 연락해 주세요.',
     'footer.note': '엔지니어링 리더십 어드바이저리',
   },
 };
@@ -267,6 +315,79 @@ function applyLang(lang) {
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+/* ── i18n placeholder support ────────────────────────────── */
+function applyPlaceholders(lang) {
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key]) el.placeholder = t[key];
+  });
+  // select default option
+  const sel = document.getElementById('cf-service');
+  if (sel && t['form.service.default']) sel.options[0].text = t['form.service.default'];
+}
+
+/* ── Email obfuscation ────────────────────────────────────── */
+function initEmailReveal() {
+  const btn = document.getElementById('reveal-email');
+  const revealed = document.getElementById('revealed-email');
+  if (!btn || !revealed) return;
+
+  // Split into parts — never assembled as a plain string in source
+  const parts = ['mark', '.', 'jun', '.', 'hahn', '@', 'gmail', '.', 'com'];
+
+  btn.addEventListener('click', () => {
+    const addr = parts.join('');
+    const link = document.createElement('a');
+    link.href = 'mailto:' + addr;
+    link.textContent = addr;
+    revealed.innerHTML = '';
+    revealed.appendChild(link);
+    revealed.hidden = false;
+    btn.hidden = true;
+  });
+}
+
+/* ── Contact form ─────────────────────────────────────────── */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const statusEl = document.getElementById('form-status');
+  const submitBtn = document.getElementById('form-submit');
+  if (!form || !statusEl) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const t = translations[currentLang];
+
+    submitBtn.disabled = true;
+    submitBtn.querySelector('span').textContent = '…';
+    statusEl.className = 'form-status';
+    statusEl.textContent = '';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        statusEl.textContent = t['form.success'] || 'Message sent!';
+        statusEl.className = 'form-status success';
+        form.reset();
+      } else {
+        throw new Error('non-ok');
+      }
+    } catch {
+      statusEl.textContent = t['form.error'] || 'Something went wrong.';
+      statusEl.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = t['form.submit'] || 'Send Message';
+    }
   });
 }
 
@@ -289,7 +410,13 @@ function initObserver() {
 /* ── Init ─────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    btn.addEventListener('click', () => {
+      applyLang(btn.dataset.lang);
+      applyPlaceholders(btn.dataset.lang);
+    });
   });
+  applyPlaceholders('en');
+  initEmailReveal();
+  initContactForm();
   initObserver();
 });

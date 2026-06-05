@@ -416,7 +416,53 @@
           Whether you need a fractional CTO, a technical advisor, or a sounding board for engineering strategy —
           I'd be glad to hear from you.
         </p>
-        <a href="mailto:REDACTED" class="btn btn-primary btn-large">REDACTED</a>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name" data-i18n="form.name">Name</label>
+              <input id="cf-name" type="text" name="name" autocomplete="name" required data-i18n-placeholder="form.name.placeholder" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="cf-company" data-i18n="form.company">Company</label>
+              <input id="cf-company" type="text" name="company" autocomplete="organization" data-i18n-placeholder="form.company.placeholder" placeholder="Company (optional)" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-email" data-i18n="form.email">Your Email</label>
+            <input id="cf-email" type="email" name="email" autocomplete="email" required data-i18n-placeholder="form.email.placeholder" placeholder="you@example.com" />
+          </div>
+          <div class="form-field">
+            <label for="cf-service" data-i18n="form.service">Service of Interest</label>
+            <select id="cf-service" name="service">
+              <option value="" data-i18n="form.service.default">Select a service…</option>
+              <option value="cto" data-i18n="svc.cto.title">CTO-as-a-Service</option>
+              <option value="vpe" data-i18n="svc.vpe.title">VP of Engineering Consulting</option>
+              <option value="advisory" data-i18n="svc.advisory.title">Technical Advisory</option>
+              <option value="devops" data-i18n="svc.devops.title">Engineering Process & CI/CD</option>
+              <option value="other" data-i18n="form.service.other">Other / Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="cf-message" data-i18n="form.message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required data-i18n-placeholder="form.message.placeholder" placeholder="Tell me a bit about your situation and what you're looking for…"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large" id="form-submit">
+              <span data-i18n="form.submit">Send Message</span>
+            </button>
+          </div>
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+        </form>
+
+        <!-- Email reveal -->
+        <div class="contact-alt">
+          <span class="contact-alt-label" data-i18n="contact.alt.label">Prefer email?</span>
+          <button class="reveal-btn" id="reveal-email" data-i18n="contact.alt.reveal">Show email address</button>
+          <span class="revealed-email" id="revealed-email" hidden></span>
+        </div>
+
         <div class="contact-links">
           <a href="https://github.com/TangoEnSkai" target="_blank" rel="noopener">GitHub</a>
           <a href="https://jp.linkedin.com/in/junhahn" target="_blank" rel="noopener">LinkedIn</a>
