@@ -336,11 +336,10 @@ function initEmailReveal() {
   const revealed = document.getElementById('revealed-email');
   if (!btn || !revealed) return;
 
-  // Split into parts — never assembled as a plain string in source
-  const parts = ['mark', '.', 'jun', '.', 'hahn', '@', 'gmail', '.', 'com'];
+  // Char codes — not a readable string in source
+  const addr = [109,97,114,107,46,106,117,110,46,104,97,104,110,64,103,109,97,105,108,46,99,111,109].map(c => String.fromCharCode(c)).join('');
 
   btn.addEventListener('click', () => {
-    const addr = parts.join('');
     const link = document.createElement('a');
     link.href = 'mailto:' + addr;
     link.textContent = addr;
