@@ -1,223 +1,271 @@
 <!DOCTYPE html>
-<html><head>
-	<meta name="generator" content="Hugo 0.74.3" />
-  <title>Mark Hahn</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Hahn — LiberWork</title>
+  <meta name="description" content="Engineering leadership advisory. CTO-as-a-Service, VP of Engineering consulting, and startup technical advisory by Mark Hahn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="main.css" />
-
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous"
-  />
 </head>
 <body>
-<main>
-  
-  <div class="box">
-    <div class="wrap">
-      <header>
-  <div class="page-title">
-    <h1>Mark Hahn</h1>
-    <div class="address"></div>
-  </div>
-  <div>
-    
-    <a href="mailto:REDACTED">REDACTED</a>
-    
-    
-    
-    <a href="https://tangoenskai.github.io">tangoenskai.github.io</a>
-    
-    
-    <a href="https://github.com/TangoEnSkai"
-      ><i class="fab fa-github"></i> TangoEnSkai</a
-    >
-    
-  </div>
-</header>
 
-      
-      <div>
-        <h2>Objective</h2>
-        <p>
-          SWE, SE, Researcher, Trilingual and Thinker based in Tokyo | ex-CircleCI, Mercari.
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Mark Hahn</a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ja">JP</button>
+          <button class="lang-btn" data-lang="ko">KR</button>
+        </div>
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label mono" data-i18n="hero.label">LiberWork Advisory</div>
+      <h1 class="hero-title">
+        <span data-i18n="hero.line1">Engineering Leadership,</span><br />
+        <span class="accent" data-i18n="hero.line2">Redefined.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">
+        I help startups and technology companies build world-class engineering organisations —
+        as an advisor, fractional CTO, or VP of Engineering.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Work with Me</a>
+        <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">See Services</a>
+      </div>
+    </div>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number accent">40<span class="stat-plus">+</span></div>
+          <div class="stat-label" data-i18n="stats.engineers">Engineers Led</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number accent">8M<span class="stat-plus">+</span></div>
+          <div class="stat-label" data-i18n="stats.dau">Daily Active Users</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number accent">6<span class="stat-plus">+</span></div>
+          <div class="stat-label" data-i18n="stats.years">Years in Leadership</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number accent">3</div>
+          <div class="stat-label" data-i18n="stats.languages">Languages</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag mono" data-i18n="services.tag">What I Offer</div>
+        <h2 data-i18n="services.title">Advisory Services</h2>
+        <p class="section-sub" data-i18n="services.sub">
+          Tailored engagements for companies at every stage of engineering growth.
         </p>
       </div>
-      
-      
-      <section>
-  <h2>Education</h2>
-  
-  <div class="school">
-    <div class="heading-line">
-      <h3>Tokyo Institute of Technology - Tokyo, Japan</h3>
-      <h3> - Mar 2019</h3>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">⚙</div>
+          <h3 data-i18n="svc.cto.title">CTO-as-a-Service</h3>
+          <p data-i18n="svc.cto.desc">
+            Fractional CTO engagement for early-stage startups that need executive technical leadership
+            without a full-time hire. Strategy, architecture, and team building.
+          </p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">◈</div>
+          <h3 data-i18n="svc.vpe.title">VP of Engineering Consulting</h3>
+          <p data-i18n="svc.vpe.desc">
+            Scaling engineering organisations from 5 to 50+. Hiring frameworks, performance management,
+            org design, and cross-functional alignment.
+          </p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">◎</div>
+          <h3 data-i18n="svc.advisory.title">Technical Advisory</h3>
+          <p data-i18n="svc.advisory.desc">
+            Long-term advisory for founders and engineering leaders. Architecture review,
+            technology strategy, and hands-on mentorship.
+          </p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">▷</div>
+          <h3 data-i18n="svc.devops.title">Engineering Process &amp; CI/CD</h3>
+          <p data-i18n="svc.devops.desc">
+            Microservices architecture, DevOps transformation, and CI/CD optimisation.
+            Built on experience from Mercari and CircleCI.
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <p>
-      <em>Master of Engineering (Transdisciplinary Science and Engineering)</em>
-    </p>
-    
-  </div>
-  
-  <div class="school">
-    <div class="heading-line">
-      <h3>Dongguk University - Seoul, Republic of Korea</h3>
-      <h3> - Aug 2016</h3>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag mono" data-i18n="exp.tag">Background</div>
+        <h2 data-i18n="exp.title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-meta">
+            <span class="timeline-date mono">2026 – Present</span>
+            <span class="timeline-badge" data-i18n="badge.current">Current</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Technical Advisor to CTO</h3>
+            <div class="timeline-company">Mantra Inc.</div>
+            <p data-i18n="exp.mantra">Providing strategic technical advisory directly to the CTO, supporting architecture decisions and engineering leadership.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-meta">
+            <span class="timeline-date mono">2025 – Present</span>
+            <span class="timeline-badge" data-i18n="badge.current">Current</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Advisory &amp; Independent Research</h3>
+            <div class="timeline-company">LiberWork</div>
+            <p data-i18n="exp.liberwork">Engineering leadership advisory and independent research through my own practice. CTO-as-a-Service, VP of Engineering consulting, and startup technical advisory.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-meta">
+            <span class="timeline-date mono">2024 – 2025</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Chief Technology Officer</h3>
+            <div class="timeline-company">THECOO Inc.</div>
+            <p data-i18n="exp.thecoo.cto">Led the organisation as CTO following progression through Engineering Manager → Senior EM → Head of Engineering. Oversaw ~40 employees across Product Engineering, Product Management, SRE, Corporate Engineering, QA, and New Product divisions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-meta">
+            <span class="timeline-date mono">2022 – 2023</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Solutions Engineer</h3>
+            <div class="timeline-company">CircleCI (Circle Internet Services)</div>
+            <p data-i18n="exp.circleci">Led CI/CD design and process improvement with enterprise companies across APAC. Drove technical pre-sales and customer integrations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-meta">
+            <span class="timeline-date mono">2019 – 2022</span>
+          </div>
+          <div class="timeline-content">
+            <h3>Software Engineer → Senior Software Engineer</h3>
+            <div class="timeline-company">Mercari, Inc.</div>
+            <p data-i18n="exp.mercari">Designed and built microservices for an 8M+ DAU platform. Migrated PHP monolith to Go/gRPC. Presented at GopherCon and gRPC Conf. Led internal engineering training programmes.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
-    
-    <p>
-      <em>Bachelor of Science in Computer Science and Engineering</em>
-    </p>
-    
-  </div>
-  
-</section>
+  </section>
 
-      
-      
-      <section>
-  <h2>Experience</h2>
-	      
-  <div>
-    <div class="heading-line">
-      <h3>Solutions Engineer at Circle Internet Service, Inc. (CircleCI) - Tokyo, Japan</h3>
-      <h3>May 2022 - Apr 2023</h3>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <div class="section-tag mono" data-i18n="about.tag">About</div>
+          <h2 data-i18n="about.title">Who I Am</h2>
+          <p data-i18n="about.p1">
+            I am a trilingual engineering leader based in Japan with over a decade of experience
+            across software engineering, people management, and executive leadership —
+            from hands-on backend development at Mercari to running a 40-person engineering
+            organisation as CTO at THECOO.
+          </p>
+          <p data-i18n="about.p2">
+            Through LiberWork, I now channel that experience into advisory engagements,
+            helping founders and engineering leaders navigate the challenges of scaling teams,
+            technology, and culture.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Go / Golang</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">DevOps / CI/CD</span>
+            <span class="tag">Org Design</span>
+            <span class="tag">Engineering Strategy</span>
+          </div>
+        </div>
+        <div class="about-education fade-in">
+          <div class="edu-card">
+            <div class="edu-degree" data-i18n="edu.master">Master of Engineering</div>
+            <div class="edu-school">Tokyo Institute of Technology</div>
+            <div class="edu-year mono">2017 – 2019</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree" data-i18n="edu.bachelor">Bachelor of Science, Computer Science</div>
+            <div class="edu-school">Dongguk University, Seoul</div>
+            <div class="edu-year mono">– 2016</div>
+          </div>
+          <div class="about-langs">
+            <div class="lang-item"><span class="accent mono">EN</span> English (British)</div>
+            <div class="lang-item"><span class="accent mono">JP</span> 日本語</div>
+            <div class="lang-item"><span class="accent mono">KR</span> 한국어</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <ul>
-      
-      <li>Lead improvement of CI/CD design and processes with various companies based in APAC</li>
+  </section>
 
-      <li>Support the technical implementation and day-to-day management of CircleCI Demonstrations and Trials, integrating our customers chosen technology stack</li>
-
-      <li>Ensuring early customer success and a long-term business relationship</li>
-
-      <li>Demonstrate and prove the technical feasibility of the CircleCI platform to highly technical audiences</li>
-
-      <li>Build and launch new sales products and customer integrations to our internal teams and customer community</li>
-
-      <li>Partner closely with our customer success teams to craft an outstanding customer experience for life</li>
-
-      <li>Close the product feedback loop through our collaboration with Product and Engineering teams to help build product roadmaps based on market/customer requirements</li>
-      
-      <li>2023/02: Application Strategy Summit NSW 2023 / CircleCI Exhibitor: introduce CircleCI as a CI/CD solution for various organisations such as government offices, enterprises, and tech companies.</li>
-	    
-      <li>2022/10: TECH WEEK SINGAPORE (Cloud Expo ASIA) / CircleCI Exhibitor: consulted and engaged in technical discussions with visitors who aim to improve their DevOps practices and software development lifecycles with better CI/CD strategies and automation.</li>
-      
-      <li>2022/10: CircleCI's First Webinar for South Korea / Lead a technical webinar for the Korean market, got one of the most registrations and participants.</li>
-
-    </ul>
-  </div>
-  
-  <div>
-    <div class="heading-line">
-      <h3>Senior Software Engineer, Microservices/Backend at Mercari, Inc. - Tokyo, Japan</h3>
-      <h3>Apr 2019 - May 2022</h3>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner fade-in">
+        <div class="section-tag mono" data-i18n="contact.tag">Let's Talk</div>
+        <h2 data-i18n="contact.title">Start an Engagement</h2>
+        <p data-i18n="contact.sub">
+          Whether you need a fractional CTO, a technical advisor, or a sounding board for engineering strategy —
+          I'd be glad to hear from you.
+        </p>
+        <a href="mailto:REDACTED" class="btn btn-primary btn-large">REDACTED</a>
+        <div class="contact-links">
+          <a href="https://github.com/TangoEnSkai" target="_blank" rel="noopener" data-i18n="contact.github">GitHub</a>
+          <a href="https://jp.linkedin.com/in/junhahn" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://tangoenskai.github.io" data-i18n="contact.site">tangoenskai.github.io</a>
+        </div>
+      </div>
     </div>
-    <ul>
-      
-      <li>designed, led and developed new projects into approx. 8M daily active user service</li>
-      
-      <li>migrated PHP monolithic API to Microservices with Golang and gRPC/Protobuf</li>
-      
-      <li>developed new microservices and managed to release to production</li>
-      
-      <li>shared knowledge internally/externally by attending tech conferences (GopherCon, gRPC Conf)</li>
-      
-      <li>created and conducted new software engineering training programme</li>
-      
-      <li>wrote and published several articles to company’s official blog, Mercan</li>
-      
-      <li>led a diversity community team and conducted several internal/external projects</li>
-      
-      <li>utilised Docker containers for development and deployment</li>
-      
-      <li>wrote automation tasks for continuous integration and continuous deployment</li>
-      
-      <li>learnt documenting code, version control using Git</li>
-      
-      <li>followed an agile development process including test-driven development, pair programming, and continuous releases</li>
-      
-      <li>wrote tests for the backend microservices</li>
-      
-    </ul>
-  </div>
-  
-  <div>
-    <div class="heading-line">
-      <h3>Software Engineer, Intern at Eventacular, Inc. - Tokyo, Japan</h3>
-      <h3>Mar 2018 - Jul 2018</h3>
-    </div>
-    <ul>
-      
-      <li>developed a web service frontend using React.js and Relay</li>
-      
-      <li>developed a web service backend using Phoenix (a Rails-like web framework written Elixir) and GraphQL</li>
-      
-      <li>wrote tests for the frontend and backend</li>
-      
-      <li>employed tools such as Pivotal Tracker, Slack, Github, and CircleCI</li>
-      
-    </ul>
-  </div>
-  
-</section>
+  </section>
 
-      
-      
-      <section>
-        <h2>Activities &amp; Awards</h2>
-        <ul>
-          
-          <li>ACM SIGCHI Communication Ambassador</li>
-          
-          <li>Master’s thesis Final Presentation GEDES Course Outstanding Presentation Award</li>
-          
-          <li>Science Communication for Global Talents, Oversea Programme with Science Museum, London, UK</li>
-          
-          <li>Teaching Assistant for Introduction to Society and Technology; Social Design Project; Software in the Future Society</li>
-          
-          <li>Several Tuition Scholarships; Japan Student Services Organization Scholarship</li>
-          
-          <li>the First Prize for graduation project by Dept. of Comp. Sci. and Eng.; Achievements, Excellence and the President’s Special Awards for undergraduate UAV (Unmanned Aerial Vehicle) project; paper published; patent registered;</li>
-          
-        </ul>
-      </section>
-      
-      <section>
-        <h2>Hobbies</h2>
-        <ul>
-          
-          <li>Street Photography with Rangefinder Camera and 35mm films</li>
-          
-          <li>Guitars and Guitar Pedals</li>
-          
-          <li>Learning new languages</li>
-          
-        </ul>
-      </section>
-      
-      <section>
-        <h2>Some Quotes</h2>
-        <ul>
-          
-          <li>Less is more.</li>
-          
-          <li>Get things done.</li>
-          
-          <li>Avoid success at all costs.</li>
-          
-        </ul>
-      </section>
-      
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="mono">© 2026 Mark Hahn / LiberWork</span>
+        <span class="footer-note" data-i18n="footer.note">Engineering Leadership Advisory</span>
+      </div>
     </div>
-  </div>
-  
-</main>
+  </footer>
 
-    </body>
+  <script src="main.js"></script>
+</body>
 </html>
