@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mark Hahn — LiberWork</title>
+  <title>Mark Hahn — LiberWerk</title>
   <meta name="description" content="Engineering leadership advisory. CTO-as-a-Service, VP of Engineering consulting, and startup technical advisory by Mark Hahn." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,12 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Mark Hahn</a>
+      <a href="#" class="nav-logo">LiberWerk<span class="nav-logo-sub">by Mark Hahn</span></a>
+      <div class="nav-links">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </div>
       <div class="nav-right">
         <div class="lang-switcher">
           <button class="lang-btn active" data-lang="en">EN</button>
@@ -29,22 +34,24 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-label mono" data-i18n="hero.label">LiberWork Advisory</div>
-      <h1 class="hero-title">
-        <span data-i18n="hero.line1">Engineering Leadership,</span><br />
-        <span class="accent" data-i18n="hero.line2">Redefined.</span>
-      </h1>
-      <p class="hero-sub" data-i18n="hero.sub">
-        I help startups and technology companies build world-class engineering organisations —
-        as an advisor, fractional CTO, or VP of Engineering.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Work with Me</a>
-        <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">See Services</a>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-label mono" data-i18n="hero.label">LiberWerk Advisory</div>
+        <h1 class="hero-title">
+          <span data-i18n="hero.line1">Engineering Leadership,</span><br />
+          <span class="accent" data-i18n="hero.line2">Redefined.</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">
+          I help startups and technology companies build world-class engineering organisations —
+          as an advisor, fractional CTO, or VP of Engineering.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Work with Me</a>
+          <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">See Services</a>
+        </div>
       </div>
     </div>
-    <div class="hero-grid-bg" aria-hidden="true"></div>
   </section>
 
   <!-- STATS -->
@@ -89,6 +96,10 @@
             Fractional CTO engagement for early-stage startups that need executive technical leadership
             without a full-time hire. Strategy, architecture, and team building.
           </p>
+          <div class="service-meta">
+            <span class="service-tag" data-i18n="svc.cto.format">Monthly retainer</span>
+            <span class="service-tag" data-i18n="svc.cto.duration">3 months+</span>
+          </div>
         </div>
         <div class="service-card fade-in">
           <div class="service-icon">◈</div>
@@ -97,6 +108,10 @@
             Scaling engineering organisations from 5 to 50+. Hiring frameworks, performance management,
             org design, and cross-functional alignment.
           </p>
+          <div class="service-meta">
+            <span class="service-tag" data-i18n="svc.vpe.format">Project-based</span>
+            <span class="service-tag" data-i18n="svc.vpe.duration">Flexible</span>
+          </div>
         </div>
         <div class="service-card fade-in">
           <div class="service-icon">◎</div>
@@ -105,6 +120,10 @@
             Long-term advisory for founders and engineering leaders. Architecture review,
             technology strategy, and hands-on mentorship.
           </p>
+          <div class="service-meta">
+            <span class="service-tag" data-i18n="svc.advisory.format">Monthly retainer</span>
+            <span class="service-tag" data-i18n="svc.advisory.duration">Ongoing</span>
+          </div>
         </div>
         <div class="service-card fade-in">
           <div class="service-icon">▷</div>
@@ -113,7 +132,55 @@
             Microservices architecture, DevOps transformation, and CI/CD optimisation.
             Built on experience from Mercari and CircleCI.
           </p>
+          <div class="service-meta">
+            <span class="service-tag" data-i18n="svc.devops.format">Spot / Project</span>
+            <span class="service-tag" data-i18n="svc.devops.duration">1–3 months</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof" id="proof">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag mono" data-i18n="proof.tag">Talks &amp; Publications</div>
+        <h2 data-i18n="proof.title">In Public</h2>
+      </div>
+      <div class="proof-grid">
+        <a class="proof-card fade-in" href="https://github.com/TangoEnSkai" target="_blank" rel="noopener">
+          <div class="proof-card-top">
+            <span class="proof-type mono" data-i18n="proof.type.conf">Conference</span>
+            <span class="proof-year mono">2021</span>
+          </div>
+          <h4>GopherCon</h4>
+          <p data-i18n="proof.gophercon">Presented on Go and microservices architecture at Mercari scale.</p>
+        </a>
+        <a class="proof-card fade-in" href="https://github.com/TangoEnSkai" target="_blank" rel="noopener">
+          <div class="proof-card-top">
+            <span class="proof-type mono" data-i18n="proof.type.conf">Conference</span>
+            <span class="proof-year mono">2021</span>
+          </div>
+          <h4>gRPC Conf</h4>
+          <p data-i18n="proof.grpcconf">Spoke on gRPC and Protobuf adoption in production microservices.</p>
+        </a>
+        <a class="proof-card fade-in" href="https://engineering.mercari.com" target="_blank" rel="noopener">
+          <div class="proof-card-top">
+            <span class="proof-type mono" data-i18n="proof.type.blog">Blog</span>
+            <span class="proof-year mono">2019–2022</span>
+          </div>
+          <h4>Mercari Engineering Blog</h4>
+          <p data-i18n="proof.mercariblog">Published technical articles on microservices, Go, and engineering culture.</p>
+        </a>
+        <a class="proof-card fade-in" href="https://github.com/TangoEnSkai/uber-go-style-guide-kr" target="_blank" rel="noopener">
+          <div class="proof-card-top">
+            <span class="proof-type mono" data-i18n="proof.type.oss">Open Source</span>
+            <span class="proof-year mono">2020</span>
+          </div>
+          <h4>Uber Go Style Guide (KR)</h4>
+          <p data-i18n="proof.uberstyle">Korean translation of the Uber Go Style Guide — widely referenced in the Korean Go community.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -146,8 +213,8 @@
           </div>
           <div class="timeline-content">
             <h3>Advisory &amp; Independent Research</h3>
-            <div class="timeline-company">LiberWork</div>
-            <p data-i18n="exp.liberwork">Engineering leadership advisory and independent research through my own practice. CTO-as-a-Service, VP of Engineering consulting, and startup technical advisory.</p>
+            <div class="timeline-company">LiberWerk</div>
+            <p data-i18n="exp.liberwerk">Engineering leadership advisory and independent research through my own practice. CTO-as-a-Service, VP of Engineering consulting, and startup technical advisory.</p>
           </div>
         </div>
 
@@ -188,13 +255,15 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT / ADVISOR PROFILE -->
   <section class="about" id="about">
     <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag mono" data-i18n="about.tag">Advisor Profile</div>
+        <h2 data-i18n="about.title">Who I Am</h2>
+      </div>
       <div class="about-grid">
         <div class="about-text fade-in">
-          <div class="section-tag mono" data-i18n="about.tag">About</div>
-          <h2 data-i18n="about.title">Who I Am</h2>
           <p data-i18n="about.p1">
             I am a trilingual engineering leader based in Japan with over a decade of experience
             across software engineering, people management, and executive leadership —
@@ -202,10 +271,31 @@
             organisation as CTO at THECOO.
           </p>
           <p data-i18n="about.p2">
-            Through LiberWork, I now channel that experience into advisory engagements,
+            Through LiberWerk, I now channel that experience into advisory engagements,
             helping founders and engineering leaders navigate the challenges of scaling teams,
             technology, and culture.
           </p>
+          <p data-i18n="about.p3">
+            My approach is direct and practical: I work closely with clients to understand their
+            specific context, then bring the frameworks and pattern recognition from having
+            done it before — not generic consulting playbooks.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-title" data-i18n="pillar.leadership">Leadership</div>
+              <p data-i18n="pillar.leadership.desc">From IC to CTO — I've done every rung. I help leaders grow into their next level.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title" data-i18n="pillar.architecture">Architecture</div>
+              <p data-i18n="pillar.architecture.desc">Microservices, distributed systems, Go/gRPC. Practical tradeoffs, not ivory tower design.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title" data-i18n="pillar.culture">Culture</div>
+              <p data-i18n="pillar.culture.desc">Cross-cultural teams across Japan, Korea, and globally. Building high-trust, high-output orgs.</p>
+            </div>
+          </div>
+
           <div class="about-tags">
             <span class="tag">Go / Golang</span>
             <span class="tag">Microservices</span>
@@ -213,23 +303,36 @@
             <span class="tag">DevOps / CI/CD</span>
             <span class="tag">Org Design</span>
             <span class="tag">Engineering Strategy</span>
+            <span class="tag">People Management</span>
+            <span class="tag">Cross-cultural Teams</span>
           </div>
         </div>
-        <div class="about-education fade-in">
-          <div class="edu-card">
-            <div class="edu-degree" data-i18n="edu.master">Master of Engineering</div>
-            <div class="edu-school">Tokyo Institute of Technology</div>
-            <div class="edu-year mono">2017 – 2019</div>
+
+        <div class="about-sidebar fade-in">
+          <div class="about-education">
+            <div class="sidebar-label mono" data-i18n="sidebar.education">Education</div>
+            <div class="edu-card">
+              <div class="edu-degree" data-i18n="edu.master">Master of Engineering</div>
+              <div class="edu-school">Tokyo Institute of Technology</div>
+              <div class="edu-year mono">2017 – 2019</div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-degree" data-i18n="edu.bachelor">Bachelor of Science, Computer Science</div>
+              <div class="edu-school">Dongguk University, Seoul</div>
+              <div class="edu-year mono">– 2016</div>
+            </div>
           </div>
-          <div class="edu-card">
-            <div class="edu-degree" data-i18n="edu.bachelor">Bachelor of Science, Computer Science</div>
-            <div class="edu-school">Dongguk University, Seoul</div>
-            <div class="edu-year mono">– 2016</div>
-          </div>
-          <div class="about-langs">
+
+          <div class="about-langs-block">
+            <div class="sidebar-label mono" data-i18n="sidebar.languages">Languages</div>
             <div class="lang-item"><span class="accent mono">EN</span> English (British)</div>
             <div class="lang-item"><span class="accent mono">JP</span> 日本語</div>
             <div class="lang-item"><span class="accent mono">KR</span> 한국어</div>
+          </div>
+
+          <div class="about-based">
+            <div class="sidebar-label mono" data-i18n="sidebar.based">Based in</div>
+            <div class="based-value" data-i18n="sidebar.location">Tokyo, Japan</div>
           </div>
         </div>
       </div>
@@ -248,9 +351,8 @@
         </p>
         <a href="mailto:REDACTED" class="btn btn-primary btn-large">REDACTED</a>
         <div class="contact-links">
-          <a href="https://github.com/TangoEnSkai" target="_blank" rel="noopener" data-i18n="contact.github">GitHub</a>
+          <a href="https://github.com/TangoEnSkai" target="_blank" rel="noopener">GitHub</a>
           <a href="https://jp.linkedin.com/in/junhahn" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://tangoenskai.github.io" data-i18n="contact.site">tangoenskai.github.io</a>
         </div>
       </div>
     </div>
@@ -260,7 +362,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="mono">© 2026 Mark Hahn / LiberWork</span>
+        <span class="mono">© 2026 Mark Hahn / LiberWerk</span>
         <span class="footer-note" data-i18n="footer.note">Engineering Leadership Advisory</span>
       </div>
     </div>
