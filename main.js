@@ -11,10 +11,20 @@ const translations = {
     'hero.sub': 'I help startups and technology companies build world-class engineering organisations — as an advisor, fractional CTO, or VP of Engineering.',
     'hero.cta1': 'Work with Me',
     'hero.cta2': 'See Services',
-    'stats.engineers': 'Engineers Led',
     'stats.dau': 'Daily Active Users',
-    'stats.years': 'Years in Leadership',
-    'stats.languages': 'Languages',
+    'stats.dau.ctx': 'C2C platform at Mercari scale',
+    'stats.scale': 'Service Scale-up',
+    'stats.scale.ctx': '10K → 500K+ users, SRE-led',
+    'stats.engineers': 'Engineers Managed',
+    'stats.engineers.ctx': 'At peak as CTO, THECOO',
+    'stats.growth': 'Org Growth Delivered',
+    'stats.growth.ctx': 'Engineering org built from scratch',
+    'stats.products.num': 'B2B · C2C · B2B2C',
+    'stats.products': 'Product Models',
+    'stats.products.ctx': 'Cross-domain product leadership',
+    'stats.career.num': 'EM → CTO',
+    'stats.career': 'in 2.5 Years',
+    'stats.career.ctx': 'Fastest path through the ladder',
     'services.tag': 'What I Offer',
     'services.title': 'Advisory Services',
     'services.sub': 'Tailored engagements for companies at every stage of engineering growth.',
@@ -64,15 +74,15 @@ const translations = {
     'exp.eventacular': 'Developed web service frontend with React.js/Relay and backend with Phoenix (Elixir) and GraphQL.',
     'about.tag': 'Advisor Profile',
     'about.title': 'Who I Am',
-    'about.p1': 'I am a trilingual engineering leader based in Japan with over a decade of experience across software engineering, people management, and executive leadership — from hands-on backend development at Mercari to running a 40-person engineering organisation as CTO at THECOO.',
-    'about.p2': 'Through LiberWerk, I now channel that experience into advisory engagements, helping founders and engineering leaders navigate the challenges of scaling teams, technology, and culture.',
-    'about.p3': 'My approach is direct and practical: I work closely with clients to understand their specific context, then bring the frameworks and pattern recognition from having done it before — not generic consulting playbooks.',
-    'pillar.leadership': 'Leadership',
-    'pillar.leadership.desc': 'From IC to CTO — I\'ve done every rung. I help leaders grow into their next level.',
-    'pillar.architecture': 'Architecture',
-    'pillar.architecture.desc': 'Microservices, distributed systems, Go/gRPC. Practical tradeoffs, not ivory tower design.',
-    'pillar.culture': 'Culture',
-    'pillar.culture.desc': 'Cross-cultural teams across Japan, Korea, and globally. Building high-trust, high-output orgs.',
+    'about.p1': 'I am a trilingual engineering leader based in Japan with hands-on experience scaling a C2C platform to 9.5M+ daily active users, growing engineering organisations 4–5×, and leading ~50 engineers as CTO — across B2B, C2C, and B2B2C product environments.',
+    'about.p2': 'Through LiberWerk, I channel that experience into advisory engagements — helping founders and engineering leaders scale teams, modernise engineering culture, and build organisations that ship with speed and reliability.',
+    'about.p3': 'My approach is direct and practical: I bring the pattern recognition from having actually done it — not generic consulting playbooks.',
+    'pillar.leadership': 'Leadership & Org Scaling',
+    'pillar.leadership.desc': 'IC → CTO across multiple companies. Grew engineering orgs 4–5×, managed ~50 direct and indirect reports, built hiring and performance frameworks from scratch.',
+    'pillar.architecture': 'Architecture & Reliability',
+    'pillar.architecture.desc': 'Designed and scaled systems from 10K to 500K+ users. Microservices, Go/gRPC, SLO/SRE practices, CI/CD — built for real production scale.',
+    'pillar.culture': 'Culture & Internationalisation',
+    'pillar.culture.desc': 'Transformed High Context Japanese engineering culture to Low Context international standards — English-first documentation, modern dev processes, cross-cultural team building across JP/KR/global.',
     'sidebar.education': 'Education',
     'sidebar.languages': 'Languages',
     'sidebar.based': 'Based in',
@@ -111,10 +121,20 @@ const translations = {
     'hero.sub': 'スタートアップ・テック企業のエンジニアリング組織づくりをサポートします。アドバイザー、フラクショナルCTO、VPoEとして。',
     'hero.cta1': '相談する',
     'hero.cta2': 'サービスを見る',
-    'stats.engineers': 'エンジニア統括数',
     'stats.dau': '日次アクティブユーザー',
-    'stats.years': 'リーダーシップ経験年数',
-    'stats.languages': '対応言語',
+    'stats.dau.ctx': 'MercariのC2Cプラットフォーム規模',
+    'stats.scale': 'サービス スケールアップ',
+    'stats.scale.ctx': '1万人 → 50万人以上、SRE主導',
+    'stats.engineers': 'エンジニア統括数',
+    'stats.engineers.ctx': 'THECOO CTO時のピーク',
+    'stats.growth': '組織成長率',
+    'stats.growth.ctx': 'エンジニアリング組織をゼロから構築',
+    'stats.products.num': 'B2B · C2C · B2B2C',
+    'stats.products': 'プロダクトモデル',
+    'stats.products.ctx': '複数ドメインでのプロダクト開発経験',
+    'stats.career.num': 'EM → CTO',
+    'stats.career': '2.5年で昇進',
+    'stats.career.ctx': 'マネージャーからCTOへの最速キャリア',
     'services.tag': 'サービス内容',
     'services.title': 'アドバイザリーサービス',
     'services.sub': '各成長フェーズに応じたエンゲージメントを提供します。',
@@ -164,15 +184,15 @@ const translations = {
     'exp.eventacular': 'React.js/RelayでフロントエンドをPhoenix（Elixir）とGraphQLでバックエンドを開発。',
     'about.tag': 'アドバイザープロフィール',
     'about.title': 'About Me',
-    'about.p1': '日本を拠点に活動するトリリンガルのエンジニアリングリーダー。ソフトウェアエンジニアリング、ピープルマネジメント、エグゼクティブリーダーシップにわたる10年以上の経験を持ちます。Mercariでのバックエンド開発からTHECOOでのCTOとして40名の組織運営まで幅広く経験。',
-    'about.p2': 'LiberWerkを通じて、その経験をアドバイザリーエンゲージメントに活かし、チーム・技術・カルチャーのスケーリング課題に取り組む創業者やエンジニアリングリーダーを支援しています。',
-    'about.p3': 'アプローチは直接的かつ実践的。クライアントの状況を深く理解した上で、実際に経験した知見とパターン認識をもとに支援します。汎用的なコンサルのプレイブックではなく。',
-    'pillar.leadership': 'リーダーシップ',
-    'pillar.leadership.desc': 'ICからCTOまで全キャリアを経験。リーダーが次のレベルへ成長するための支援をします。',
-    'pillar.architecture': 'アーキテクチャ',
-    'pillar.architecture.desc': 'マイクロサービス、分散システム、Go/gRPC。象牙の塔ではなく、実践的なトレードオフを重視。',
-    'pillar.culture': 'カルチャー',
-    'pillar.culture.desc': '日本・韓国・グローバルにまたがるクロスカルチャーチームの構築経験。高信頼・高成果の組織づくり。',
+    'about.p1': '日本を拠点に活動するトリリンガルのエンジニアリングリーダー。C2Cプラットフォームを9.5M+ DAUへスケールさせ、エンジニアリング組織を4〜5倍に成長させ、CTOとして約50名のエンジニアを率いた実績を持つ。B2B・C2C・B2B2Cの複数プロダクト環境での経験を有する。',
+    'about.p2': 'LiberWerkを通じて、その経験をアドバイザリーエンゲージメントに活かし、エンジニアリング文化の近代化、組織スケーリング、高速でリライアブルな開発組織の構築を支援しています。',
+    'about.p3': 'アプローチは直接的かつ実践的。実際にやってきたからこそのパターン認識を持ち込みます。汎用的なコンサルのプレイブックではなく。',
+    'pillar.leadership': 'リーダーシップ & 組織スケーリング',
+    'pillar.leadership.desc': '複数企業でICからCTOまでを経験。エンジニアリング組織を4〜5倍に成長させ、約50名の直接・間接マネジメント、採用・評価フレームワークをゼロから構築。',
+    'pillar.architecture': 'アーキテクチャ & 信頼性',
+    'pillar.architecture.desc': 'システムを1万人から50万人以上へスケール。マイクロサービス、Go/gRPC、SLO/SREプラクティス、CI/CD — 実プロダクションスケールでの設計・運用経験。',
+    'pillar.culture': 'カルチャー & 国際化',
+    'pillar.culture.desc': 'ハイコンテキストな日本型エンジニアリング文化からローコンテキストな国際標準へ変革。英語ファーストのドキュメント整備、モダンな開発プロセス導入、JP/KR/グローバルにまたがるチームビルディング。',
     'sidebar.education': '学歴',
     'sidebar.languages': '言語',
     'sidebar.based': '拠点',
@@ -211,10 +231,20 @@ const translations = {
     'hero.sub': '스타트업과 테크 기업이 세계 수준의 엔지니어링 조직을 만들 수 있도록 돕습니다. 어드바이저, 프랙셔널 CTO, VPoE로서.',
     'hero.cta1': '함께 일하기',
     'hero.cta2': '서비스 보기',
-    'stats.engineers': '리드한 엔지니어',
     'stats.dau': '일간 활성 사용자',
-    'stats.years': '리더십 경험',
-    'stats.languages': '구사 언어',
+    'stats.dau.ctx': 'Mercari C2C 플랫폼 규모',
+    'stats.scale': '서비스 스케일업',
+    'stats.scale.ctx': '1만명 → 50만명+, SRE 주도',
+    'stats.engineers': '엔지니어 매니지먼트',
+    'stats.engineers.ctx': 'THECOO CTO 재직 시 피크',
+    'stats.growth': '조직 성장률',
+    'stats.growth.ctx': '엔지니어링 조직 처음부터 구축',
+    'stats.products.num': 'B2B · C2C · B2B2C',
+    'stats.products': '프로덕트 모델',
+    'stats.products.ctx': '다양한 도메인 프로덕트 리드 경험',
+    'stats.career.num': 'EM → CTO',
+    'stats.career': '2.5년 만에',
+    'stats.career.ctx': '매니저에서 CTO까지 최단 경로',
     'services.tag': '서비스',
     'services.title': '어드바이저리 서비스',
     'services.sub': '엔지니어링 성장의 모든 단계에 맞춤화된 서비스를 제공합니다.',
@@ -264,15 +294,15 @@ const translations = {
     'exp.eventacular': 'React.js/Relay로 프론트엔드, Phoenix(Elixir)와 GraphQL로 백엔드를 개발.',
     'about.tag': '어드바이저 프로필',
     'about.title': '자기소개',
-    'about.p1': '일본 기반의 3개국어 구사 엔지니어링 리더. 소프트웨어 엔지니어링, 피플 매니지먼트, 임원 리더십에 걸친 10년 이상의 경험을 보유. Mercari에서의 백엔드 개발부터 THECOO에서 CTO로서 40명 조직을 운영하기까지 다양한 경험.',
-    'about.p2': 'LiberWerk를 통해 그 경험을 어드바이저리 서비스로 전환, 팀·기술·문화의 스케일링 과제를 안고 있는 창업자와 엔지니어링 리더를 지원하고 있습니다.',
-    'about.p3': '접근 방식은 직접적이고 실용적입니다. 클라이언트의 맥락을 깊이 파악한 후, 직접 경험에서 나온 프레임워크와 패턴 인식을 적용합니다. 일반적인 컨설팅 플레이북이 아닌.',
-    'pillar.leadership': '리더십',
-    'pillar.leadership.desc': 'IC부터 CTO까지 모든 단계를 경험. 리더가 다음 레벨로 성장할 수 있도록 지원합니다.',
-    'pillar.architecture': '아키텍처',
-    'pillar.architecture.desc': '마이크로서비스, 분산 시스템, Go/gRPC. 탁상 이론이 아닌 실용적인 트레이드오프.',
-    'pillar.culture': '컬처',
-    'pillar.culture.desc': '일본, 한국, 글로벌에 걸친 크로스컬처 팀 구축 경험. 고신뢰·고성과 조직 만들기.',
+    'about.p1': '일본 기반의 3개국어 구사 엔지니어링 리더. C2C 플랫폼을 9.5M+ DAU까지 스케일링하고, 엔지니어링 조직을 4~5배 성장시키며, CTO로서 약 50명의 엔지니어를 리드한 경험 보유. B2B, C2C, B2B2C 다양한 프로덕트 환경에서의 실전 경험.',
+    'about.p2': 'LiberWerk를 통해 그 경험을 어드바이저리 서비스로 전환 — 팀 스케일링, 엔지니어링 문화 현대화, 속도와 신뢰성을 갖춘 조직 구축을 지원합니다.',
+    'about.p3': '접근 방식은 직접적이고 실용적입니다. 실제로 해본 사람만이 가질 수 있는 패턴 인식을 가져옵니다. 일반적인 컨설팅 플레이북이 아닌.',
+    'pillar.leadership': '리더십 & 조직 스케일링',
+    'pillar.leadership.desc': '여러 회사에서 IC부터 CTO까지 경험. 엔지니어링 조직 4~5배 성장, 약 50명 직·간접 매니지먼트, 채용 및 성과 프레임워크 구축.',
+    'pillar.architecture': '아키텍처 & 신뢰성',
+    'pillar.architecture.desc': '시스템을 1만명에서 50만명 이상으로 스케일. 마이크로서비스, Go/gRPC, SLO/SRE, CI/CD — 실제 프로덕션 규모에서 설계·운영.',
+    'pillar.culture': '컬처 & 국제화',
+    'pillar.culture.desc': 'High Context 일본형 엔지니어링 문화를 Low Context 국제 표준으로 전환. 영어 우선 문서화, 모던 개발 프로세스 도입, JP/KR/글로벌 크로스컬처 팀 빌딩.',
     'sidebar.education': '학력',
     'sidebar.languages': '언어',
     'sidebar.based': '거점',
@@ -390,6 +420,39 @@ function initContactForm() {
   });
 }
 
+/* ── Count-up animation ───────────────────────────────────── */
+function initCountUp() {
+  const els = document.querySelectorAll('.count-up');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+
+      const el     = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const isFloat = target % 1 !== 0;
+      const duration = 1400;
+      const start = performance.now();
+
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // ease-out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = target * eased;
+        el.textContent = (isFloat ? value.toFixed(1) : Math.round(value)) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.3 });
+
+  els.forEach(el => observer.observe(el));
+}
+
 /* ── Scroll fade-in ───────────────────────────────────────── */
 function initObserver() {
   const observer = new IntersectionObserver(
@@ -418,4 +481,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmailReveal();
   initContactForm();
   initObserver();
+  initCountUp();
 });

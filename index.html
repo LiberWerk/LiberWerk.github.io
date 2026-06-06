@@ -58,22 +58,51 @@
   <section class="stats">
     <div class="container">
       <div class="stats-grid">
+
         <div class="stat-item fade-in">
-          <div class="stat-number accent">40<span class="stat-plus">+</span></div>
-          <div class="stat-label" data-i18n="stats.engineers">Engineers Led</div>
-        </div>
-        <div class="stat-item fade-in">
-          <div class="stat-number accent">8M<span class="stat-plus">+</span></div>
+          <div class="stat-number accent">
+            <span class="count-up" data-target="9.5" data-suffix="M+">9.5M+</span>
+          </div>
           <div class="stat-label" data-i18n="stats.dau">Daily Active Users</div>
+          <div class="stat-context" data-i18n="stats.dau.ctx">C2C platform at Mercari scale</div>
         </div>
+
         <div class="stat-item fade-in">
-          <div class="stat-number accent">6<span class="stat-plus">+</span></div>
-          <div class="stat-label" data-i18n="stats.years">Years in Leadership</div>
+          <div class="stat-number accent">
+            <span class="count-up" data-target="50" data-suffix="×">50×</span>
+          </div>
+          <div class="stat-label" data-i18n="stats.scale">Service Scale-up</div>
+          <div class="stat-context" data-i18n="stats.scale.ctx">10K → 500K+ users, SRE-led</div>
         </div>
+
         <div class="stat-item fade-in">
-          <div class="stat-number accent">3</div>
-          <div class="stat-label" data-i18n="stats.languages">Languages</div>
+          <div class="stat-number accent">
+            ~<span class="count-up" data-target="50" data-suffix="">50</span>
+          </div>
+          <div class="stat-label" data-i18n="stats.engineers">Engineers Managed</div>
+          <div class="stat-context" data-i18n="stats.engineers.ctx">At peak as CTO, THECOO</div>
         </div>
+
+        <div class="stat-item fade-in">
+          <div class="stat-number accent">
+            <span class="count-up" data-target="4" data-suffix="–5×">4–5×</span>
+          </div>
+          <div class="stat-label" data-i18n="stats.growth">Org Growth Delivered</div>
+          <div class="stat-context" data-i18n="stats.growth.ctx">Engineering org built from scratch</div>
+        </div>
+
+        <div class="stat-item fade-in">
+          <div class="stat-number accent stat-small" data-i18n="stats.products.num">B2B · C2C · B2B2C</div>
+          <div class="stat-label" data-i18n="stats.products">Product Models</div>
+          <div class="stat-context" data-i18n="stats.products.ctx">Cross-domain product leadership</div>
+        </div>
+
+        <div class="stat-item fade-in">
+          <div class="stat-number accent stat-small" data-i18n="stats.career.num">EM → CTO</div>
+          <div class="stat-label" data-i18n="stats.career">in 2.5 Years</div>
+          <div class="stat-context" data-i18n="stats.career.ctx">Fastest path through the ladder</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -332,45 +361,45 @@
       <div class="about-grid">
         <div class="about-text fade-in">
           <p data-i18n="about.p1">
-            I am a trilingual engineering leader based in Japan with over a decade of experience
-            across software engineering, people management, and executive leadership —
-            from hands-on backend development at Mercari to running a 40-person engineering
-            organisation as CTO at THECOO.
+            I am a trilingual engineering leader based in Japan with hands-on experience scaling
+            a C2C platform to 9.5M+ daily active users, growing engineering organisations 4–5×,
+            and leading ~50 engineers as CTO — across B2B, C2C, and B2B2C product environments.
           </p>
           <p data-i18n="about.p2">
-            Through LiberWerk, I now channel that experience into advisory engagements,
-            helping founders and engineering leaders navigate the challenges of scaling teams,
-            technology, and culture.
+            Through LiberWerk, I channel that experience into advisory engagements —
+            helping founders and engineering leaders scale teams, modernise engineering culture,
+            and build organisations that ship with speed and reliability.
           </p>
           <p data-i18n="about.p3">
-            My approach is direct and practical: I work closely with clients to understand their
-            specific context, then bring the frameworks and pattern recognition from having
-            done it before — not generic consulting playbooks.
+            My approach is direct and practical: I bring the pattern recognition from having
+            actually done it — not generic consulting playbooks.
           </p>
 
           <div class="about-pillars">
             <div class="pillar">
-              <div class="pillar-title" data-i18n="pillar.leadership">Leadership</div>
-              <p data-i18n="pillar.leadership.desc">From IC to CTO — I've done every rung. I help leaders grow into their next level.</p>
+              <div class="pillar-title" data-i18n="pillar.leadership">Leadership & Org Scaling</div>
+              <p data-i18n="pillar.leadership.desc">IC → CTO across multiple companies. Grew engineering orgs 4–5×, managed ~50 direct and indirect reports, built hiring and performance frameworks from scratch.</p>
             </div>
             <div class="pillar">
-              <div class="pillar-title" data-i18n="pillar.architecture">Architecture</div>
-              <p data-i18n="pillar.architecture.desc">Microservices, distributed systems, Go/gRPC. Practical tradeoffs, not ivory tower design.</p>
+              <div class="pillar-title" data-i18n="pillar.architecture">Architecture & Reliability</div>
+              <p data-i18n="pillar.architecture.desc">Designed and scaled systems from 10K to 500K+ users. Microservices, Go/gRPC, SLO/SRE practices, CI/CD — built for real production scale.</p>
             </div>
             <div class="pillar">
-              <div class="pillar-title" data-i18n="pillar.culture">Culture</div>
-              <p data-i18n="pillar.culture.desc">Cross-cultural teams across Japan, Korea, and globally. Building high-trust, high-output orgs.</p>
+              <div class="pillar-title" data-i18n="pillar.culture">Culture & Internationalisation</div>
+              <p data-i18n="pillar.culture.desc">Transformed High Context Japanese engineering culture to Low Context international standards — English-first documentation, modern dev processes, cross-cultural team building across JP/KR/global.</p>
             </div>
           </div>
 
           <div class="about-tags">
             <span class="tag">Go / Golang</span>
             <span class="tag">Microservices</span>
-            <span class="tag">gRPC</span>
+            <span class="tag">gRPC / Protobuf</span>
+            <span class="tag">SRE / SLO</span>
             <span class="tag">DevOps / CI/CD</span>
             <span class="tag">Org Design</span>
             <span class="tag">Engineering Strategy</span>
-            <span class="tag">People Management</span>
+            <span class="tag">B2B · C2C · B2B2C</span>
+            <span class="tag">Internationalisation</span>
             <span class="tag">Cross-cultural Teams</span>
           </div>
         </div>
