@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch — LiberWerk</title>
+  <meta name="description" content="Enquire about advisory services — CTO-as-a-Service, VP of Engineering consulting, and technical advisory by Mark Hahn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="contact-page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">LiberWerk<span class="nav-logo-sub">by Mark Hahn</span></a>
+      <div class="nav-links">
+        <a href="/#services" data-i18n="nav.services">Services</a>
+        <a href="/#experience" data-i18n="nav.experience">Experience</a>
+        <a href="/#about" data-i18n="nav.about">About</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ja">JP</button>
+          <button class="lang-btn" data-lang="ko">KR</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-main">
+
+    <!-- PROGRESS -->
+    <div class="cf-progress" id="cf-progress" aria-hidden="true">
+      <div class="cf-progress-bar" id="cf-progress-bar"></div>
+    </div>
+
+    <!-- STEP 1: Service selection -->
+    <div class="cf-step" id="step-1">
+      <div class="cf-step-inner">
+        <div class="cf-eyebrow mono" data-i18n="cf.step1.eyebrow">Step 1 of 2</div>
+        <h1 class="cf-title" data-i18n="cf.step1.title">What can I help you with?</h1>
+        <p class="cf-sub" data-i18n="cf.step1.sub">Select the area that best matches your situation.</p>
+
+        <div class="service-cards">
+          <button class="service-card-btn" data-service="cto">
+            <div class="sc-icon">⚙</div>
+            <div class="sc-body">
+              <div class="sc-title" data-i18n="cf.svc.cto.title">CTO-as-a-Service</div>
+              <div class="sc-desc" data-i18n="cf.svc.cto.desc">Need executive technical leadership without a full-time hire</div>
+            </div>
+            <div class="sc-arrow">→</div>
+          </button>
+
+          <button class="service-card-btn" data-service="vpe">
+            <div class="sc-icon">◈</div>
+            <div class="sc-body">
+              <div class="sc-title" data-i18n="cf.svc.vpe.title">VP of Engineering Consulting</div>
+              <div class="sc-desc" data-i18n="cf.svc.vpe.desc">Looking to scale or restructure your engineering organisation</div>
+            </div>
+            <div class="sc-arrow">→</div>
+          </button>
+
+          <button class="service-card-btn" data-service="advisory">
+            <div class="sc-icon">◎</div>
+            <div class="sc-body">
+              <div class="sc-title" data-i18n="cf.svc.advisory.title">Technical Advisory</div>
+              <div class="sc-desc" data-i18n="cf.svc.advisory.desc">Want ongoing mentorship, architecture review, or tech strategy</div>
+            </div>
+            <div class="sc-arrow">→</div>
+          </button>
+
+          <button class="service-card-btn" data-service="chat">
+            <div class="sc-icon">💬</div>
+            <div class="sc-body">
+              <div class="sc-title" data-i18n="cf.svc.chat.title">Just a Quick Chat</div>
+              <div class="sc-desc" data-i18n="cf.svc.chat.desc">Not sure yet — just want to explore what's possible</div>
+            </div>
+            <div class="sc-arrow">→</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Contextual form -->
+    <div class="cf-step" id="step-2" hidden>
+      <div class="cf-step-inner">
+        <button class="cf-back" id="cf-back">
+          <span>←</span> <span data-i18n="cf.back">Back</span>
+        </button>
+
+        <div class="cf-eyebrow mono" data-i18n="cf.step2.eyebrow">Step 2 of 2</div>
+        <h1 class="cf-title" id="step2-title"></h1>
+        <p class="cf-sub" id="step2-sub"></p>
+
+        <form id="cf-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" novalidate>
+          <input type="hidden" name="service" id="cf-service-hidden" />
+
+          <!-- Common fields -->
+          <div class="cf-fields">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label for="cf-name" data-i18n="cf.field.name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required
+                  data-i18n-ph="cf.ph.name" placeholder="Your name" />
+              </div>
+              <div class="cf-field">
+                <label for="cf-company" data-i18n="cf.field.company">Company</label>
+                <input id="cf-company" name="company" type="text" autocomplete="organization"
+                  data-i18n-ph="cf.ph.company" placeholder="Company (optional)" />
+              </div>
+            </div>
+            <div class="cf-field">
+              <label for="cf-email" data-i18n="cf.field.email">Your Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required
+                data-i18n-ph="cf.ph.email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <!-- Contextual questions (shown per service) -->
+          <div class="cf-contextual" id="ctx-cto" hidden>
+            <div class="cf-field">
+              <label data-i18n="cf.cto.teamsize">Current team size</label>
+              <div class="chip-group" data-name="team_size">
+                <button type="button" class="chip" data-value="1-5">1 – 5</button>
+                <button type="button" class="chip" data-value="6-15">6 – 15</button>
+                <button type="button" class="chip" data-value="16-30">16 – 30</button>
+                <button type="button" class="chip" data-value="30+">30+</button>
+              </div>
+              <input type="hidden" name="team_size" id="chip-team_size" />
+            </div>
+            <div class="cf-field">
+              <label data-i18n="cf.cto.challenge">Most urgent challenge</label>
+              <div class="chip-group" data-name="challenge">
+                <button type="button" class="chip" data-value="hiring" data-i18n="cf.chip.hiring">Hiring</button>
+                <button type="button" class="chip" data-value="architecture" data-i18n="cf.chip.arch">Architecture</button>
+                <button type="button" class="chip" data-value="process" data-i18n="cf.chip.process">Process / CI/CD</button>
+                <button type="button" class="chip" data-value="strategy" data-i18n="cf.chip.strategy">Tech strategy</button>
+              </div>
+              <input type="hidden" name="challenge" id="chip-challenge" />
+            </div>
+            <div class="cf-field">
+              <label data-i18n="cf.cto.frequency">Preferred engagement frequency</label>
+              <div class="chip-group" data-name="frequency">
+                <button type="button" class="chip" data-value="weekly" data-i18n="cf.chip.weekly">Weekly</button>
+                <button type="button" class="chip" data-value="biweekly" data-i18n="cf.chip.biweekly">Bi-weekly</button>
+                <button type="button" class="chip" data-value="monthly" data-i18n="cf.chip.monthly">Monthly</button>
+                <button type="button" class="chip" data-value="flexible" data-i18n="cf.chip.flexible">Flexible</button>
+              </div>
+              <input type="hidden" name="frequency" id="chip-frequency" />
+            </div>
+          </div>
+
+          <div class="cf-contextual" id="ctx-vpe" hidden>
+            <div class="cf-field">
+              <label data-i18n="cf.vpe.orgsize">Engineering org size</label>
+              <div class="chip-group" data-name="org_size">
+                <button type="button" class="chip" data-value="<10">&lt; 10</button>
+                <button type="button" class="chip" data-value="10-30">10 – 30</button>
+                <button type="button" class="chip" data-value="30-60">30 – 60</button>
+                <button type="button" class="chip" data-value="60+">60+</button>
+              </div>
+              <input type="hidden" name="org_size" id="chip-org_size" />
+            </div>
+            <div class="cf-field">
+              <label data-i18n="cf.vpe.focus">Primary focus area</label>
+              <div class="chip-group" data-name="focus">
+                <button type="button" class="chip" data-value="org-design" data-i18n="cf.chip.orgdesign">Org design</button>
+                <button type="button" class="chip" data-value="hiring-fw" data-i18n="cf.chip.hiringfw">Hiring framework</button>
+                <button type="button" class="chip" data-value="perf-mgmt" data-i18n="cf.chip.perfmgmt">Performance mgmt</button>
+                <button type="button" class="chip" data-value="culture" data-i18n="cf.chip.culture">Culture / Values</button>
+              </div>
+              <input type="hidden" name="focus" id="chip-focus" />
+            </div>
+          </div>
+
+          <div class="cf-contextual" id="ctx-advisory" hidden>
+            <div class="cf-field">
+              <label data-i18n="cf.advisory.type">Advisory type</label>
+              <div class="chip-group" data-name="advisory_type">
+                <button type="button" class="chip" data-value="architecture" data-i18n="cf.chip.arch">Architecture review</button>
+                <button type="button" class="chip" data-value="mentorship" data-i18n="cf.chip.mentorship">Leadership mentorship</button>
+                <button type="button" class="chip" data-value="tech-strategy" data-i18n="cf.chip.techstrategy">Tech strategy</button>
+                <button type="button" class="chip" data-value="other" data-i18n="cf.chip.other">Other</button>
+              </div>
+              <input type="hidden" name="advisory_type" id="chip-advisory_type" />
+            </div>
+          </div>
+
+          <!-- Message (all services) -->
+          <div class="cf-field">
+            <label for="cf-message" data-i18n="cf.field.message">Tell me about your situation</label>
+            <textarea id="cf-message" name="message" rows="4" required
+              data-i18n-ph="cf.ph.message" placeholder="What's the context? What are you looking to achieve?"></textarea>
+          </div>
+
+          <div class="cf-submit-row">
+            <button type="submit" class="btn btn-primary btn-large cf-submit" id="cf-submit">
+              <span data-i18n="cf.submit">Send Enquiry</span>
+            </button>
+            <p class="cf-disclaimer" data-i18n="cf.disclaimer">I typically respond within 3 business days.</p>
+          </div>
+          <div class="cf-status" id="cf-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- STEP 3: Success -->
+    <div class="cf-step" id="step-success" hidden>
+      <div class="cf-step-inner cf-success-inner">
+        <div class="cf-success-icon">✓</div>
+        <h1 class="cf-title" data-i18n="cf.success.title">Enquiry received.</h1>
+        <p class="cf-sub" data-i18n="cf.success.sub">I'll review your message and be in touch within 3 business days.</p>
+        <div class="cf-success-actions">
+          <a href="/" class="btn btn-ghost" data-i18n="cf.success.back">Back to LiberWerk</a>
+          <a href="https://jp.linkedin.com/in/junhahn" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

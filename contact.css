@@ -1,0 +1,288 @@
+/* ── Contact Page ─────────────────────────────────────────── */
+.contact-page { min-height: 100vh; }
+
+.contact-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+/* Progress bar */
+.cf-progress {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border);
+  z-index: 99;
+}
+.cf-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* Steps */
+.cf-step {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem 5rem;
+  animation: stepIn 0.3s ease;
+}
+@keyframes stepIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.cf-step-inner {
+  width: 100%;
+  max-width: 640px;
+}
+
+.cf-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.cf-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.cf-sub {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+/* Back button */
+.cf-back {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--transition);
+}
+.cf-back:hover { color: var(--text); }
+
+/* ── Step 1: Service cards ────────────────────────────────── */
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.service-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  background: var(--bg2);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition);
+  width: 100%;
+}
+.service-card-btn:hover { background: var(--bg3); }
+.service-card-btn:hover .sc-arrow { transform: translateX(4px); color: var(--accent); }
+
+.sc-icon {
+  font-size: 1.3rem;
+  color: var(--accent);
+  opacity: 0.85;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.sc-body { flex: 1; }
+
+.sc-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
+}
+
+.sc-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.sc-arrow {
+  font-size: 16px;
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* ── Step 2: Form ─────────────────────────────────────────── */
+#cf-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.cf-fields { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cf-field label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--mono);
+}
+
+.cf-field input,
+.cf-field textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 11px 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--transition);
+}
+.cf-field input:focus,
+.cf-field textarea:focus { border-color: var(--accent); }
+.cf-field input::placeholder,
+.cf-field textarea::placeholder { color: #3a3a3a; }
+.cf-field textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+
+/* Contextual sections */
+.cf-contextual {
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: stepIn 0.25s ease;
+}
+
+/* Chips */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.chip {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.chip:hover { border-color: var(--muted); color: var(--text); }
+.chip.selected {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Submit row */
+.cf-submit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.cf-submit { width: 100%; justify-content: center; }
+
+.cf-disclaimer {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  font-family: var(--mono);
+}
+
+.cf-status {
+  font-size: 13px;
+  text-align: center;
+  border-radius: var(--radius);
+  min-height: 1rem;
+  transition: all 0.3s ease;
+}
+.cf-status.error {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  padding: 10px;
+}
+
+/* ── Step 3: Success ──────────────────────────────────────── */
+.cf-success-inner { text-align: center; }
+
+.cf-success-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.cf-success-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .cf-row { grid-template-columns: 1fr; }
+  .cf-step { padding: 2rem 1.25rem 4rem; }
+}
