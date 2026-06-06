@@ -103,39 +103,59 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 document.addEventListener('DOMContentLoaded', () => applyContactPlaceholders('en'));
 
-/* ── Form submit ──────────────────────────────────────────── */
+/* ── Email assembly (obfuscated) ──────────────────────────── */
+function getEmail() {
+  return [109,97,114,107,46,106,117,110,46,104,97,104,110,64,103,109,97,105,108,46,99,111,109]
+    .map(c => String.fromCharCode(c)).join('');
+}
+
+/* ── Form submit → mailto ─────────────────────────────────── */
 const form     = document.getElementById('cf-form');
 const statusEl = document.getElementById('cf-status');
 const submitBtn = document.getElementById('cf-submit');
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const t   = window.translations?.[window.currentLang || 'en'] || {};
-  const lang = window.currentLang || 'en';
+  const t = window.translations?.[window.currentLang || 'en'] || {};
 
-  submitBtn.disabled = true;
-  submitBtn.querySelector('span').textContent = '…';
-  statusEl.className = 'cf-status';
-  statusEl.textContent = '';
+  const name    = document.getElementById('cf-name')?.value.trim() || '';
+  const company = document.getElementById('cf-company')?.value.trim() || '';
+  const email   = document.getElementById('cf-email')?.value.trim() || '';
+  const service = document.getElementById('cf-service-hidden')?.value || selectedService || '';
+  const message = document.getElementById('cf-message')?.value.trim() || '';
 
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' },
-    });
-    if (res.ok) {
-      step2.style.display = 'none';
-      stepSuccess.style.display = 'flex';
-      progressBar.style.width = '100%';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      throw new Error('non-ok');
-    }
-  } catch {
-    statusEl.textContent = t['cf.error'] || 'Something went wrong. Please try again.';
-    statusEl.className = 'cf-status error';
-    submitBtn.disabled = false;
-    submitBtn.querySelector('span').textContent = t['cf.submit'] || 'Send Enquiry';
-  }
+  // Collect chip selections
+  const chips = {};
+  document.querySelectorAll('.chip.selected').forEach(chip => {
+    const group = chip.closest('.chip-group');
+    if (group?.dataset.name) chips[group.dataset.name] = chip.dataset.value;
+  });
+
+  const serviceLabel = {
+    cto: 'CTO-as-a-Service',
+    vpe: 'VP of Engineering Consulting',
+    advisory: 'Technical Advisory',
+    chat: 'Quick Chat',
+  }[service] || service;
+
+  const subject = encodeURIComponent(`[LiberWerk Enquiry] ${serviceLabel}${name ? ' — ' + name : ''}`);
+
+  let body = '';
+  if (name)    body += `Name: ${name}\n`;
+  if (company) body += `Company: ${company}\n`;
+  if (email)   body += `Email: ${email}\n`;
+  body += `Service: ${serviceLabel}\n`;
+  Object.entries(chips).forEach(([k, v]) => { body += `${k}: ${v}\n`; });
+  if (message) body += `\nMessage:\n${message}\n`;
+
+  const mailto = `mailto:${getEmail()}?subject=${subject}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+
+  // Show success after short delay (email app opens)
+  setTimeout(() => {
+    step2.style.display = 'none';
+    stepSuccess.style.display = 'flex';
+    progressBar.style.width = '100%';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 400);
 });

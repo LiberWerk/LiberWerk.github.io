@@ -228,7 +228,7 @@ const translations = {
     'form.message': 'メッセージ',
     'form.message.placeholder': '状況やご要望をお聞かせください…',
     'form.submit': '送信する',
-    'form.success': 'メッセージを受け付けました。近日中にご連絡いたします。',
+    'form.success': 'メールアプリを起動しています…',
     'form.error': '送信に失敗しました。再度お試しいただくか、メールでご連絡ください。',
     'footer.note': 'エンジニアリングリーダーシップ アドバイザリー',
   },
@@ -344,7 +344,7 @@ const translations = {
     'form.message': '메시지',
     'form.message.placeholder': '현재 상황과 필요한 것을 알려주세요…',
     'form.submit': '메시지 보내기',
-    'form.success': '메시지가 전송됐습니다. 곧 연락드리겠습니다.',
+    'form.success': '이메일 앱을 열고 있습니다…',
     'form.error': '전송에 실패했습니다. 다시 시도하거나 이메일로 직접 연락해 주세요.',
     'footer.note': '엔지니어링 리더십 어드바이저리',
   },
@@ -398,43 +398,43 @@ function initEmailReveal() {
   });
 }
 
-/* ── Contact form ─────────────────────────────────────────── */
+/* ── Contact form → mailto ────────────────────────────────── */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const statusEl = document.getElementById('form-status');
   const submitBtn = document.getElementById('form-submit');
   if (!form || !statusEl) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     const t = translations[currentLang];
 
-    submitBtn.disabled = true;
-    submitBtn.querySelector('span').textContent = '…';
-    statusEl.className = 'form-status';
-    statusEl.textContent = '';
+    const data = new FormData(form);
+    const name    = (data.get('name') || '').trim();
+    const company = (data.get('company') || '').trim();
+    const email   = (data.get('email') || '').trim();
+    const service = (data.get('service') || '').trim();
+    const message = (data.get('message') || '').trim();
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' },
-      });
+    const subject = encodeURIComponent(
+      `[LiberWerk Enquiry]${service ? ' ' + service : ''}${name ? ' — ' + name : ''}`
+    );
 
-      if (res.ok) {
-        statusEl.textContent = t['form.success'] || 'Message sent!';
-        statusEl.className = 'form-status success';
-        form.reset();
-      } else {
-        throw new Error('non-ok');
-      }
-    } catch {
-      statusEl.textContent = t['form.error'] || 'Something went wrong.';
-      statusEl.className = 'form-status error';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = t['form.submit'] || 'Send Message';
-    }
+    let body = '';
+    if (name)    body += `Name: ${name}\n`;
+    if (company) body += `Company: ${company}\n`;
+    if (email)   body += `Reply-to: ${email}\n`;
+    if (service) body += `Service: ${service}\n`;
+    if (message) body += `\nMessage:\n${message}\n`;
+
+    const addr = [109,97,114,107,46,106,117,110,46,104,97,104,110,64,103,109,97,105,108,46,99,111,109]
+      .map(c => String.fromCharCode(c)).join('');
+
+    window.location.href = `mailto:${addr}?subject=${subject}&body=${encodeURIComponent(body)}`;
+
+    statusEl.textContent = t['form.success'] || 'Opening your email app…';
+    statusEl.className = 'form-status success';
+    form.reset();
   });
 }
 
