@@ -143,6 +143,22 @@
   flex-shrink: 0;
 }
 
+/* Hiring card — full width + accent border */
+.service-card-btn--hiring {
+  background: var(--bg3);
+  border-top: 1px solid rgba(245, 158, 11, 0.2);
+  position: relative;
+}
+.service-card-btn--hiring::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.service-card-btn--hiring:hover { background: var(--bg2); }
+
 /* ── Step 2: Form ─────────────────────────────────────────── */
 #cf-form { display: flex; flex-direction: column; gap: 1.25rem; }
 

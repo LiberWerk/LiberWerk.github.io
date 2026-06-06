@@ -82,6 +82,15 @@
             </div>
             <div class="sc-arrow">→</div>
           </button>
+
+          <button class="service-card-btn service-card-btn--hiring" data-service="hiring">
+            <div class="sc-icon">◎◈</div>
+            <div class="sc-body">
+              <div class="sc-title" data-i18n="cf.svc.hiring.title">Engineering Talent & Hiring</div>
+              <div class="sc-desc" data-i18n="cf.svc.hiring.desc">Full-cycle hiring design, technical interviewing, and recruiter network to find SE / EM / TL / VPoE</div>
+            </div>
+            <div class="sc-arrow">→</div>
+          </button>
         </div>
       </div>
     </div>
@@ -188,6 +197,37 @@
                 <button type="button" class="chip" data-value="other" data-i18n="cf.chip.other">Other</button>
               </div>
               <input type="hidden" name="advisory_type" id="chip-advisory_type" />
+            </div>
+          </div>
+
+          <div class="cf-contextual" id="ctx-hiring" hidden>
+            <div class="cf-field">
+              <label data-i18n="cf.hiring.role">Role(s) to hire</label>
+              <div class="chip-group" data-name="hiring_role">
+                <button type="button" class="chip" data-value="SWE" data-i18n="cf.chip.swe">Software Engineer</button>
+                <button type="button" class="chip" data-value="EM" data-i18n="cf.chip.em">Engineering Manager</button>
+                <button type="button" class="chip" data-value="TL" data-i18n="cf.chip.tl">Tech Lead</button>
+                <button type="button" class="chip" data-value="VPoE/CTO" data-i18n="cf.chip.vpe.cto">VPoE / CTO</button>
+              </div>
+              <input type="hidden" name="hiring_role" id="chip-hiring_role" />
+            </div>
+            <div class="cf-field">
+              <label data-i18n="cf.hiring.scope">Scope of support needed</label>
+              <div class="chip-group" data-name="hiring_scope">
+                <button type="button" class="chip" data-value="design-only" data-i18n="cf.chip.designonly">Process design only</button>
+                <button type="button" class="chip" data-value="design-interview" data-i18n="cf.chip.designinterview">Design + interviewing</button>
+                <button type="button" class="chip" data-value="full-agent" data-i18n="cf.chip.fullagent">Full agent (sourcing + hiring)</button>
+              </div>
+              <input type="hidden" name="hiring_scope" id="chip-hiring_scope" />
+            </div>
+            <div class="cf-field">
+              <label data-i18n="cf.hiring.timeline">Hiring timeline</label>
+              <div class="chip-group" data-name="hiring_timeline">
+                <button type="button" class="chip" data-value="asap" data-i18n="cf.chip.asap">ASAP</button>
+                <button type="button" class="chip" data-value="1-3mo" data-i18n="cf.chip.onetothree">1–3 months</button>
+                <button type="button" class="chip" data-value="3mo+" data-i18n="cf.chip.threemo">3 months+</button>
+              </div>
+              <input type="hidden" name="hiring_timeline" id="chip-hiring_timeline" />
             </div>
           </div>
 

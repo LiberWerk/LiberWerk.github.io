@@ -322,6 +322,30 @@ body {
 .service-icon { font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent); opacity: 0.85; }
 .service-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
 .service-card p { font-size: 14px; color: var(--muted); line-height: 1.65; flex: 1; }
+
+/* Full-width 5th card */
+.service-card--full {
+  grid-column: 1 / -1;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+.service-card--full:hover { background: var(--bg3); }
+.service-card-full-inner {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.service-card-full-inner .service-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.service-card-full-inner > div { flex: 1; }
+.accent-tag {
+  color: var(--accent) !important;
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
 .service-meta {
   display: flex;
   gap: 0.5rem;

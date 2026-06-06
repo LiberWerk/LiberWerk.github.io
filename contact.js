@@ -14,18 +14,21 @@ const stepTitles = {
     vpe:      { title: 'VP of Engineering enquiry', sub: 'Tell me about your organisation.' },
     advisory: { title: 'Technical Advisory enquiry', sub: 'Let me know what kind of support you\'re looking for.' },
     chat:     { title: 'Let\'s have a chat', sub: 'Just leave your details and a short note — no pressure.' },
+    hiring:   { title: 'Engineering Talent & Hiring', sub: 'Tell me about the role(s) and what kind of support you need.' },
   },
   ja: {
     cto:      { title: 'CTO-as-a-Service のご相談', sub: '状況を把握するためにいくつか質問させてください。' },
     vpe:      { title: 'VPoEコンサルティングのご相談', sub: '組織についてお聞かせください。' },
     advisory: { title: 'テクニカルアドバイザリーのご相談', sub: 'どのようなサポートをお探しかお知らせください。' },
     chat:     { title: 'まずはお話しましょう', sub: 'お名前とご連絡先だけで大丈夫です。' },
+    hiring:   { title: 'エンジニアリング採用のご相談', sub: '採用したいポジションと必要なサポートをお聞かせください。' },
   },
   ko: {
     cto:      { title: 'CTO-as-a-Service 문의', sub: '상황을 파악하기 위해 몇 가지 질문드릴게요.' },
     vpe:      { title: 'VP of Engineering 컨설팅 문의', sub: '조직에 대해 알려주세요.' },
     advisory: { title: '기술 어드바이저리 문의', sub: '어떤 지원이 필요하신지 알려주세요.' },
     chat:     { title: '먼저 이야기해봐요', sub: '이름과 연락처만 남겨주시면 돼요.' },
+    hiring:   { title: '엔지니어링 채용 문의', sub: '채용하실 포지션과 필요한 지원 범위를 알려주세요.' },
   },
 };
 
