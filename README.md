@@ -1,22 +1,19 @@
-# LiberWerk
+# LiberWerk — Development Repository
 
 **Engineering leadership advisory by Mark Hahn.**
 
-🌐 **[liberwerk.github.io](https://liberwerk.github.io)**
+🌐 **Live site: [liberwerk.github.io](https://liberwerk.github.io)**
 
 ---
 
 ## About
 
-LiberWerk is the advisory practice of Mark Hahn — a trilingual engineering leader based in Japan with experience scaling engineering organisations at Mercari, CircleCI, and THECOO.
+This is the **development repository** for the LiberWerk advisory site. All edits and feature work happen here. Changes pushed to `main` are automatically mirrored to the public site within ~2 minutes via GitHub Actions.
 
-Services offered:
-
-- Fractional CTO for early-stage startups
-- VP of Engineering consulting for scaling organisations
-- Long-term technical advisory
-- Engineering process & CI/CD optimisation
-- Full-cycle engineering talent hiring
+| Repo | Role |
+|------|------|
+| [`TangoEnSkai/tangoenskai.github.io`](https://github.com/TangoEnSkai/tangoenskai.github.io) | ✏️ Development — all edits happen here |
+| [`LiberWerk/LiberWerk.github.io`](https://github.com/LiberWerk/LiberWerk.github.io) | 🌐 Public mirror — auto-synced on every push to `main` |
 
 ---
 
@@ -27,7 +24,7 @@ Services offered:
 | Framework | Vanilla HTML / CSS / JavaScript (no build step) |
 | Fonts | Inter, JetBrains Mono (Google Fonts) |
 | i18n | Built-in JS translation layer (EN / JP / KR) |
-| Hosting | GitHub Pages |
+| Hosting | GitHub Pages (via LiberWerk org) |
 
 ---
 
@@ -43,24 +40,14 @@ Services offered:
 ├── contact.js        # Contact form logic
 ├── assets/           # Images and static assets
 ├── sitemap.xml
-└── index.xml
+├── index.xml
+└── .github/
+    └── workflows/
+        └── sync-to-liberwerkio.yml   # Auto-sync to public mirror
 ```
 
 ---
 
-## Development Workflow
+## Open Issues
 
-This repository is the **public mirror** of the development repository.
-
-| Repo | Role |
-|------|------|
-| [`TangoEnSkai/tangoenskai.github.io`](https://github.com/TangoEnSkai/tangoenskai.github.io) | Development — all edits happen here |
-| [`LiberWerk/LiberWerk.github.io`](https://github.com/LiberWerk/LiberWerk.github.io) | Public mirror — auto-synced on every push to `main` |
-
-Changes pushed to `TangoEnSkai/tangoenskai.github.io@main` are automatically mirrored here via GitHub Actions and published to [liberwerk.github.io](https://liberwerk.github.io) within ~2 minutes.
-
----
-
-## Contact
-
-For advisory enquiries, visit [liberwerk.github.io](https://liberwerk.github.io) or connect via [LinkedIn](https://www.linkedin.com/in/markhahn).
+See the [issue tracker](https://github.com/TangoEnSkai/tangoenskai.github.io/issues) for planned improvements.
